@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAITRI - Space AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="logo-container">
+            <!-- UPDATED: Added class="isro-logo" -->
+            <img src="isro.png" alt="ISRO Logo" class="isro-logo">
+            <img src="maitri-logo.png" alt="MAITRI Logo" class="maitri-logo">
+        </div>
+        <div class="status">🟢 Monitoring</div>
+    </header>
+
+    <main class="container">
+        <div class="left">
+            <div class="video-box">
+                <video id="camera" autoplay playsinline></video>
+                <div id="cameraError" class="camera-error hidden">Camera access denied.</div>
+                <video id="astroVideo" class="astro-video hidden" src="astronaut-reply.mp4" muted playsinline loop></video>
+            </div>
+            <div class="emotion-box">
+                <h3>Emotion Status</h3>
+                <p>Current Emotion: <b>Calm</b></p>
+                <p>Confidence: 82%</p>
+                <p>Physical State: Active</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>MAITRI Interaction</h2>
+            <div class="chat-box" id="chatBox">
+                <div class="message maitri">MAITRI: How are you feeling today?</div>
+            </div>
+            <form id="chatForm" class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Type or click the mic to speak..." autocomplete="off" required>
+                <button type="button" id="micBtn">🎙️</button>
+                <button type="submit">Send</button>
+            </form>
+            <div class="quick-actions">
+                <button>🧘 Breathing</button>
+                <button>🎵 Relax</button>
+                <button>💤 Sleep</button>
+                <button id="report-btn">📡 Report</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="crew-bar">
+        <img src="astro1.jpg" alt="Crew Member 1">
+        <img src="astro2.jpg" alt="Crew Member 2">
+        <img src="astro3.jpg" alt="Crew Member 3">
+        <img src="astro4.jpg" alt="Crew Member 4">
+    </footer>
+
+    <!-- == BREATHING EXERCISE MODULE HTML == -->
+    <div id="breathing-module" class="breathing-module hidden">
+      <button id="close-breathing" class="close-btn">&times;</button>
+      <div class="breathing-content">
+        <div class="pacer"></div>
+        <p id="breathing-instruction">Get Ready...</p>
+      </div>
+    </div>
+
+    <!-- == REPORT MODULE HTML == -->
+    <div id="report-module" class="report-module hidden">
+      <div class="report-content">
+        <button id="close-report" class="close-btn">&times;</button>
+        <h2>Submit Daily Report</h2>
+        <textarea id="report-textarea" placeholder="Enter your status, observations, or any issues..."></textarea>
+        <button id="submit-report-btn" class="submit-btn">Submit Report</button>
+        <p id="report-status" class="report-status"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

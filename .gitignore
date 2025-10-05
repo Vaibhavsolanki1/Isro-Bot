@@ -1,0 +1,51 @@
+# Dependencies
+/Frontend/node_modules
+/Backend/node_modules
+node_modules
+
+# Environment Variables (Secrets)
+.env
+/Backend/.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+
+### Step 2: Create a `README.md` File
+
+A good project always has a `README.md` file to explain what it does. I've written one for you.
+
+1.  Go to your main **`Project Isro`** folder.
+2.  Create a new file and name it **`README.md`**.
+3.  Paste the content from the file below into it.
+
+
+http://googleusercontent.com/immersive_entry_chip/0
+
+### Step 3: Upload to GitHub
+
+1.  **Create a GitHub Account** if you don't have one.
+2.  Go to GitHub and click **"New repository"**.
+3.  Give your repository a name (e.g., `maitri-ai-assistant`) and click **"Create repository"**. Do not add a README or .gitignore from the website.
+4.  You will see a page with commands. Copy the repository URL (it ends with `.git`).
+5.  Now, open a terminal in your main **`Project Isro`** folder and run these commands one by one:
+
+    ```bash
+    # Step 1: Initialize Git in your project
+    git init -b main
+
+    # Step 2: Add all your files to be tracked
+    git add .
+
+    # Step 3: Save your files with a message
+    git commit -m "Initial commit of MAITRI AI Assistant"
+
+    # Step 4: Link your local project to your GitHub repository
+    git remote add origin YOUR_REPOSITORY_URL_HERE 
+    # (Replace with the URL you copied from GitHub)
+
+    # Step 5: Push your code to GitHub
+    git push -u origin main
+    
+After these commands finish, refresh your GitHub page. All your project files will be there, ready to be shared!
